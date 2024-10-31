@@ -1,3 +1,3 @@
 packages:
   - git: "https://github.com/theirc/er-analytics-dbt_pardot_source"
-    revision: "main"
+    revision: "tyler/combine-pardot-schemas"
