@@ -34,7 +34,7 @@ select
     email_url_builder_version_number,
     email_url_builder_audience_segment_code,
     email_url_builder_test_variant,
-    is_email_url_builder_format
+    is_email_url_builder_format,
 
     
     campaigns.campaign_name as activity_campaign_name 
