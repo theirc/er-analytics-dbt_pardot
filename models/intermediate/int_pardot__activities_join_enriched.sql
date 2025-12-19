@@ -33,6 +33,7 @@ select
     email_url_builder_month_full_name,
     email_url_builder_version_number,
     email_url_builder_audience_segment_code,
+    email_url_builder_audience_segment_name,
     email_url_builder_test_variant,
     is_email_url_builder_format,
 
