@@ -27,6 +27,15 @@ select
     list_email_name,
     list_email_subject,
 
+    /* An email specific URL builder was rolled out globally in late FY25, with full adoption across markets from FY26. See https://theirc.github.io/URLBuilder/#emailUrlGenPage . 
+    New attributes from the URL builder created on stg_pardot__list_email and passed through below */
+    email_url_builder_month_abbreviated,
+    email_url_builder_month_full_name,
+    email_url_builder_version_number,
+    email_url_builder_audience_segment_code,
+    email_url_builder_test_variant,
+    is_email_url_builder_format
+
     
     campaigns.campaign_name as activity_campaign_name 
 
