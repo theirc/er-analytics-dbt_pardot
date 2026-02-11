@@ -64,7 +64,23 @@ models:
         description: Timestamp of most recent email activity of a list member
       - name: most_recent_visit_activity_timestamp
         description: Timestamp of most recent visit activity of a list member
-
+  - name: pardot__list_email_identifiers
+    description: Each record represents a unique list email in Pardot, identified by a natural key. This model aggregates relevant information for data quality and reporting purposes, and flags potential duplicates for further investigation.
+    columns:
+      - name: list_email_natural_key
+        description: A natural key that identifies unique list email entries in Pardot, which may be based on a combination of attributes such as list ID and email name.
+      - name: list_email_name
+        description: The name of the list email in Pardot. In cases where there are multiple entries with the same natural key, this field aggregates all distinct names for reporting purposes.
+      - name: list_email_subject
+        description: The subject of the list email in Pardot. In cases where there are multiple entries with the same natural key, this field aggregates all distinct subjects for reporting purposes.
+      - name: list_email_type
+        description: The type of the list email in Pardot. In cases where there are multiple entries with the same natural key, this field aggregates all distinct types for reporting purposes.
+      - name: first_list_email_sent_at
+        description: The timestamp of when the first email with this natural key was sent in Pardot.
+      - name: last_list_email_sent_at
+        description: The timestamp of when the most recent email with this natural key was sent in Pardot.
+      - name: has_duplicate_list_email_entries
+        description: A boolean flag indicating whether there are multiple entries in Pardot with the same natural key, which may suggest potential duplicates that require further investigation.
   - name: pardot__opportunities
     description: Each record represents an opportunity in Pardot.
     columns:
