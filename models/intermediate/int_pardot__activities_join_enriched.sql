@@ -16,16 +16,25 @@ list_emails as (
 select 
     visitor_activity.*,
     
-    is_mmus_formated_list_email_name,
-    list_email_natural_key,
+    /*basics */
     list_email_sent_at,
-    list_email_keyword_segment,
-    list_email_keyword_status,
-    list_email_keyword_type,
-    list_email_name_parsed_topic,
-
     list_email_name,
     list_email_subject,
+    
+    /* parsed dimensions from list email name generated via the URL builder*/
+    list_email_fiscal_year,
+    list_email_month_abbreviated,
+    list_email_version_number,
+    list_email_audience_segment_code,
+    list_email_audience_segment_name,
+    list_email_test_variant,
+    list_email_type,
+
+    /* flags and keys */
+    is_list_email_url_builder_format,
+    list_email_name_internal_id,
+    list_email_natural_key,
+
 
     
     campaigns.campaign_name as activity_campaign_name 
