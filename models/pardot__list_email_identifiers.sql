@@ -6,6 +6,7 @@
         listagg(distinct list_email_name, ', ') as list_email_name,
         listagg(distinct list_email_subject, ', ') as list_email_subject,
         listagg(distinct list_email_type, ', ') as list_email_type,
+        listagg(distinct list_email_creative, ', ') as list_email_creative,
 
         /*Catching potential cases where there are multiple emails with the same natural key that were sent at different times - for data quality / tracking purposes */
         min(list_email_sent_at) as first_list_email_sent_at,
