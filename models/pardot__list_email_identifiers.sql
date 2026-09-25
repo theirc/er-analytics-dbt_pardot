@@ -10,6 +10,7 @@
         /*Catching potential cases where there are multiple emails with the same natural key that were sent at different times - for data quality / tracking purposes */
         min(list_email_sent_at) as first_list_email_sent_at,
         max(list_email_sent_at) as last_list_email_sent_at, 
+        listagg(distinct list_email_creative, ', ') as list_email_creative,
 
         /*counts */
         count(*) as count_list_email_entries,
