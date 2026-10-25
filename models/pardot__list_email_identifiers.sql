@@ -11,6 +11,7 @@
         min(list_email_sent_at) as first_list_email_sent_at,
         max(list_email_sent_at) as last_list_email_sent_at, 
         listagg(distinct list_email_creative, ', ') as list_email_creative,
+        listagg(distinct list_email_market_fiscal_aggregate, ', ') as list_email_market_fiscal_aggregate,
 
         /*counts */
         count(*) as count_list_email_entries,
