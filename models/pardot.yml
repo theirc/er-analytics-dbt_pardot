@@ -81,6 +81,10 @@ models:
         description: The timestamp of when the most recent email with this natural key was sent in Pardot.
       - name: has_duplicate_list_email_entries
         description: A boolean flag indicating whether there are multiple entries in Pardot with the same natural key, which may suggest potential duplicates that require further investigation.
+      - name: list_email_creative
+        description: The creative content of the list email, defined by email fundraisers in part 4 of the Pardot List Email Name, created in the Email URL Builder. In cases where there are multiple entries with the same natural key, this field aggregates all distinct creative content for reporting purposes.
+      - name: list_email_market_fiscal_aggregate
+        description: The market, fiscal year, month, version number and optional testing segment associated with the list email. Created on stg_pardot_list_email in order to provide an additional business aggregate of email performance.
   - name: pardot__opportunities
     description: Each record represents an opportunity in Pardot.
     columns:
