@@ -10,8 +10,8 @@
         /*Catching potential cases where there are multiple emails with the same natural key that were sent at different times - for data quality / tracking purposes */
         min(list_email_sent_at) as first_list_email_sent_at,
         max(list_email_sent_at) as last_list_email_sent_at, 
-        listagg(distinct list_email_creative, ', ') as list_email_creative,
-        listagg(distinct list_email_market_fiscal_aggregate, ', ') as list_email_market_fiscal_aggregate,
+        listagg(distinct list_email_creative_name, ', ') as list_email_creative_name,
+        listagg(distinct list_email_copy_identifier, ', ') as list_email_copy_identifier,
 
         /*counts */
         count(*) as count_list_email_entries,
